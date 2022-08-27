@@ -1,0 +1,64 @@
+[
+    {
+        "userId": 1,
+        "username": "ahmad",
+        "password": "ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f",
+        "contact": "998912356985"
+    },
+    {
+        "userId": 2,
+        "username": "mahmud",
+        "password": "a17444550e2c127b02ea1c197bcffa422c21713040f53d5c2ca7925419bccf7f",
+        "contact": "998912156785"
+    },
+    {
+        "userId": 3,
+        "username": "anvar",
+        "password": "e24df920078c3dd4e7e8d2442f00e5c9ab2a231bb3918d65cc50906e49ecaef4",
+        "contact": "998916376385"
+    },
+    {
+        "userId": 4,
+        "username": "salim",
+        "password": "54e3bf8aa77e97caf5277992d90b1e2b52d1558c8c804e9b4d3b0f44e4403916",
+        "contact": "998901234567"
+    },
+    {
+        "userId": 5,
+        "username": "vali",
+        "password": "54e3bf8aa77e97caf5277992d90b1e2b52d1558c8c804e9b4d3b0f44e4403916",
+        "contact": "998901234567"
+    },
+    {
+        "userId": 6,
+        "username": "hamdam",
+        "password": "53d07f1271fde7f2fc848bd1cc46997b9a8e379457b122690dd9a0c8706c9ea1",
+        "contact": "998901234567"
+    },
+    {
+        "userId": 7,
+        "username": "alisher",
+        "password": "53d07f1271fde7f2fc848bd1cc46997b9a8e379457b122690dd9a0c8706c9ea1",
+        "contact": "998901234567"
+    },
+    {
+        "userId": 8,
+        "username": "kamol",
+        "password": "32d134692dd0044060d760dcd16de8c807ad47f4c559f94860d3387b037cc3f1",
+        "contact": "998922583664"
+    },
+    {
+        "userId": 9,
+        "username": "holid",
+        "password": "2fa9bbb2a14b6e268007a97230542ee4b91ac20ff03104848d8533386759d604",
+        "contact": "998905641236",
+        "avatar": "/avatars/1661517238990photo_2022-07-14_16-29-38.jpg"
+    },
+    {
+        "userId": 10,
+        "username": "holida",
+        "password": "2fa9bbb2a14b6e268007a97230542ee4b91ac20ff03104848d8533386759d604",
+        "contact": "998905641236",
+        "avatar": "/avatars/1661522288162photo_2022-07-14_16-29-38.jpg"
+    }
+]
