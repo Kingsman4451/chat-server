@@ -36,6 +36,6 @@ app.use((error, req, res, next) => {
     status: error.status,
     message: error.name
   })
-  process.exit()
+  // process.exit()
 })
 app.listen(PORT, ()=> console.log("server ready http://localhost:" + PORT ))
