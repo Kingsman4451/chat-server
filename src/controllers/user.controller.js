@@ -63,7 +63,6 @@ const GET = (req, res, next) => {
       )
     }
     res.send(users)
-    
   } catch (error) {
     
   }

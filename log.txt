@@ -23,3 +23,9 @@
 /messages/9--------GET---------Fri Aug 26 2022 17:37:02 GMT+0500 (Узбекистан, стандартное время)---------Cannot set headers after they are sent to the client
 /messages?userId=9--------GET---------Sat Aug 27 2022 12:24:00 GMT+0500 (Узбекистан, стандартное время)---------Cannot set headers after they are sent to the client
 /messages?userId=2--------GET---------Sat Aug 27 2022 12:24:09 GMT+0500 (Узбекистан, стандартное время)---------Cannot set headers after they are sent to the client
+/register--------POST---------Sat Aug 27 2022 20:59:39 GMT+0500 (Узбекистан, стандартное время)---------Cannot read properties of undefined (reading 'avatar')
+/register--------POST---------Sat Aug 27 2022 21:07:18 GMT+0500 (Узбекистан, стандартное время)---------Cannot read properties of undefined (reading 'avatar')
+/register--------POST---------Sat Aug 27 2022 21:07:45 GMT+0500 (Узбекистан, стандартное время)---------Cannot read properties of undefined (reading 'avatar')
+/register--------POST---------Sat Aug 27 2022 21:12:42 GMT+0500 (Узбекистан, стандартное время)---------Cannot read properties of null (reading 'avatar')
+/register--------POST---------Sat Aug 27 2022 21:13:07 GMT+0500 (Узбекистан, стандартное время)---------Cannot read properties of null (reading 'avatar')
+/register--------POST---------Sat Aug 27 2022 21:15:09 GMT+0500 (Узбекистан, стандартное время)---------Cannot read properties of null (reading 'avatar')
