@@ -1,1 +1,22 @@
-[]
+[
+    {
+        "dataId": 1,
+        "messageId": 3,
+        "downloadLink": "1661869373449image.jpg"
+    },
+    {
+        "dataId": 2,
+        "messageId": 6,
+        "downloadLink": "1661869581640chasyi-na-upakovke.jpg"
+    },
+    {
+        "dataId": 3,
+        "messageId": 7,
+        "downloadLink": "1661869581648chasyi-na-upakovke.jpg"
+    },
+    {
+        "dataId": 4,
+        "messageId": 11,
+        "downloadLink": "1661869844834n0walls_21.jpg"
+    }
+]

@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 let app = express();
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Token");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept,Token, Authorization");
   next();
 });
 app.use(express.json())
@@ -36,6 +36,6 @@ app.use((error, req, res, next) => {
     status: error.status,
     message: error.name
   })
-  // process.exit()
+  process.exit()
 })
 app.listen(PORT, ()=> console.log("server ready http://localhost:" + PORT ))

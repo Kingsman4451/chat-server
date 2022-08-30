@@ -9,6 +9,8 @@ const router = Router()
 router.get('/messages', checktoken, messageController.GET)
 router.get('/messages/:userId',checktoken, messageController.GET)
 router.post('/messages',checktoken, messageController.POST)
+router.get('/download/:fileName', messageController.DOWNLOAD)
+
 
 
 export default router

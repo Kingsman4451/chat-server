@@ -10,6 +10,7 @@ const router = Router()
 router.post('/login', validation, userController.LOGIN)
 router.post('/register', validation, userController.REGISTER)
 router.get('/users', checktoken, userController.GET)
+router.get('/user', checktoken, userController.GETUSER)
 router.get('/users/:userId', checktoken, userController.GET)
 
 export default router

@@ -8,6 +8,7 @@ moment.locale('uz-latn')
 const GET = (req, res, next) => {
   try {
     let messages = read('messages')
+    let data = read('data')
     let users = read('users')
     let { userId } = req.query
     messages.map(message => {
@@ -16,6 +17,8 @@ const GET = (req, res, next) => {
         return user.userId == message.userId
       })
     })
+
+
     if(userId){
       let message = messages.filter(message => message.userId == userId)
       if (!message.length) {
@@ -26,7 +29,7 @@ const GET = (req, res, next) => {
       }
       res.send(message)
     }
-    res.send(messages)
+    res.send([messages, data])
   } catch (error) {
     return next(new InternalServerError(500, error.message))
   }
@@ -37,26 +40,48 @@ const POST = (req, res, next) => {
   try {
     let { body } = req.body
     let messages = read('messages')
-    let users = read('users')
+    let data = read('data')
     let dataName = ''
-    if(typeof body !== 'string') {
+    if(req.files != null) {
       dataName = new Date().getTime() + req.files.body.name.replace(/\s/g, '') 
       req.files.body.mv(path.join(process.cwd(), "src", 'uploads', 'data', dataName))
     }
-    console.log(body);
     let newMessage = {
       messageId: messages.length ? messages.at(-1).messageId + 1 : 1,
       userId: req.userId,
-      body: dataName ? `/data/${dataName}`: body,
-      createdAt: moment().format('LT')
+      body: dataName ? `data/${dataName}`: body,
+      createdAt: moment().format('LT'),
+      isText: dataName ? false : true
     }
+    
+    if(req.files != null){
+      let newData = {
+        dataId: data.length ? data.at(-1).dataId + 1 : 1,
+        messageId: newMessage.messageId,
+        downloadLink: dataName
+      }
+      data.push(newData)
+      write('data', data)
+    }
+    
     messages.push(newMessage)
     write('messages', messages)
     return res.status(201).json({
       status: 201,
       message: 'success',
-      data: newMessage
+      data: newMessage,
     })
+    
+  } catch (error) {
+    return next(new InternalServerError(500, error.message))
+  }
+}
+
+const DOWNLOAD = (req, res, next) => {
+  try {
+    return res.download(path.join(process.cwd(), 'src', 'uploads' ,'data', req.params.fileName))
+
+    
   } catch (error) {
     return next(new InternalServerError(500, error.message))
   }
@@ -65,5 +90,6 @@ const POST = (req, res, next) => {
 
 export default {
   GET,
-  POST
+  POST,
+  DOWNLOAD
 }

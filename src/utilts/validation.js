@@ -11,5 +11,5 @@ export const registerSchema = Joi.object({
   password: Joi.string().min(8).required(),
   repeat_password: Joi.ref("password"),
   contact: Joi.string().pattern(new RegExp(/^998[389][0123456789][0-9]{7}$/)),
-  avatar: Joi.any()
+  avatar: Joi.string().pattern(new RegExp(/\.(gif|jpe?g|tiff?|png|webp|bmp)$/i))
 })

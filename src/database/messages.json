@@ -1,38 +1,79 @@
 [
     {
         "messageId": 1,
-        "userId": 8,
-        "body": "Hello",
-        "createdAt": "15:00"
-    },
-    {
-        "messageId": 1,
-        "userId": 2,
-        "body": "Goodbye",
-        "createdAt": "16:00"
-    },
-    {
-        "messageId": 1,
-        "userId": 8,
-        "body": "world",
-        "createdAt": "17:00"
+        "userId": 1,
+        "body": "Hammaga salom",
+        "createdAt": "19:22",
+        "isText": true
     },
     {
         "messageId": 2,
-        "userId": 2,
-        "body": "salom",
-        "createdAt": "17:03"
+        "userId": 1,
+        "body": "nima qilyapslar",
+        "createdAt": "19:22",
+        "isText": true
     },
     {
         "messageId": 3,
-        "userId": 9,
-        "body": "frontent va backend",
-        "createdAt": "17:36"
+        "userId": 1,
+        "body": "data/1661869373449image.jpg",
+        "createdAt": "19:22",
+        "isText": false
     },
     {
         "messageId": 4,
-        "userId": 10,
-        "body": "frontent va backend",
-        "createdAt": "12:04"
+        "userId": 2,
+        "body": "salom",
+        "createdAt": "19:24",
+        "isText": true
+    },
+    {
+        "messageId": 5,
+        "userId": 2,
+        "body": "qaleysan",
+        "createdAt": "19:25",
+        "isText": true
+    },
+    {
+        "messageId": 6,
+        "userId": 2,
+        "body": "data/1661869581640chasyi-na-upakovke.jpg",
+        "createdAt": "19:26",
+        "isText": false
+    },
+    {
+        "messageId": 7,
+        "userId": 3,
+        "body": "meni ismim salim ",
+        "createdAt": "19:27",
+        "isText": true
+    },
+    {
+        "messageId": 8,
+        "userId": 3,
+        "body": "meni ismim salim ",
+        "createdAt": "19:27",
+        "isText": true
+    },
+    {
+        "messageId": 9,
+        "userId": 3,
+        "body": "nimalar qilyapsan nabi",
+        "createdAt": "19:30",
+        "isText": true
+    },
+    {
+        "messageId": 10,
+        "userId": 3,
+        "body": "kim bor",
+        "createdAt": "19:30",
+        "isText": true
+    },
+    {
+        "messageId": 11,
+        "userId": 3,
+        "body": "data/1661869844834n0walls_21.jpg",
+        "createdAt": "19:30",
+        "isText": false
     }
 ]

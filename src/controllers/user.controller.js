@@ -30,7 +30,7 @@ const REGISTER = (req, res, next) => {
     let users = read('users')
     let { username, password, contact } = req.body
     let avatarName = ''
-    if(req.files.avatar.name){
+    if(req.files){
       avatarName = new Date().getTime() + req.files.avatar.name.replace(/\s/g, '') 
       req.files.avatar.mv(path.join(process.cwd(), "src", 'uploads', 'avatars', avatarName))
     }
@@ -64,12 +64,28 @@ const GET = (req, res, next) => {
     }
     res.send(users)
   } catch (error) {
+    return next(new InternalServerError(500, error.message))
+  }
+}
+
+const GETUSER = (req, res, next) => {
+  try {
+    let users= read('users')
     
+    if(req.userId){
+      return res.status(200).send(
+        {userId: req.userId}
+      )
+    }
+    res.send(users)
+  } catch (error) {
+    return next(new InternalServerError(500, error.message))
   }
 }
 
 export default {
   LOGIN,
   REGISTER,
-  GET
+  GET,
+  GETUSER
 }

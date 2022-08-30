@@ -10,7 +10,7 @@ export default (req, res, next) =>{
     }
 
     if(req.url == '/register'){
-      let {error} = registerSchema.validate(req.body)
+      let {error} = registerSchema.validate({...req.body, ...req.files.name})
       if(error) throw error
     }
 
