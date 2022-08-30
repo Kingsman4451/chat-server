@@ -63,13 +63,6 @@
         "isText": true
     },
     {
-        "messageId": 10,
-        "userId": 3,
-        "body": "kim bor",
-        "createdAt": "19:30",
-        "isText": true
-    },
-    {
         "messageId": 11,
         "userId": 3,
         "body": "data/1661869844834n0walls_21.jpg",
