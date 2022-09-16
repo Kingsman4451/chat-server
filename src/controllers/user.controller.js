@@ -30,7 +30,7 @@ const REGISTER = (req, res, next) => {
     let users = read('users')
     let { username, password, contact } = req.body
     let avatarName = ''
-    if(req.files){
+    if(req.files.avatar){
       avatarName = new Date().getTime() + req.files.avatar.name.replace(/\s/g, '') 
       req.files.avatar.mv(path.join(process.cwd(), "src", 'uploads', 'avatars', avatarName))
     }

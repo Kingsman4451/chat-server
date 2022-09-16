@@ -1,13 +1,38 @@
-import express from 'express';
+import express from "express";
+import { createServer } from "http";
+import { Server } from "socket.io";
 import fileUpload from 'express-fileupload';
 import fs from 'fs';
 import path from 'path';
 import  userRouter from './routes/user.router.js'
 import  messageRouter from './routes/message.router.js'
-
 const PORT = process.env.PORT || 5000;
 
-let app = express();
+
+
+
+const app = express();
+const httpServer = createServer(app);
+const io = new Server(httpServer, {
+  cors :{
+    origin : "http://localhost:5173"
+  }
+});
+
+io.on("connection", (socket) => {
+  socket.on('new user',(data)=>{
+    io.emit("new user", data)
+  })
+
+  socket.on('new message',(data)=>{
+    io.emit("new message", data)
+  })
+
+});
+
+
+
+
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept,Token, Authorization");
@@ -17,8 +42,10 @@ app.use(express.json())
 app.use(fileUpload())
 app.use(express.static(path.join(process.cwd(), 'src', 'uploads')))
 
+
 app.use(userRouter)
 app.use(messageRouter)
+
 
 app.use((error, req, res, next) => {
   if(error.status != 500){
@@ -38,4 +65,4 @@ app.use((error, req, res, next) => {
   })
   process.exit()
 })
-app.listen(PORT, ()=> console.log("server ready http://localhost:" + PORT ))
+httpServer.listen(PORT, ()=> console.log("server ready http://localhost:" + PORT ))

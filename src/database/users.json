@@ -8,16 +8,23 @@
     },
     {
         "userId": 2,
-        "username": "nabi",
+        "username": "davronbek",
         "password": "8a9bcf1e51e812d0af8465a8dbcc9f741064bf0af3b3d08e6b0246437c19f7fb",
-        "contact": "998977778899",
-        "avatar": "/avatars/1661869400274n0walls_25.jpg"
+        "contact": "998945556677",
+        "avatar": "/avatars/1662727582879b94481776ffb4bb4390248708c4b9a37.jpg"
     },
     {
         "userId": 3,
+        "username": "nabi",
+        "password": "8a9bcf1e51e812d0af8465a8dbcc9f741064bf0af3b3d08e6b0246437c19f7fb",
+        "contact": "998977778899",
+        "avatar": "/avatars/1662731523314chasyi-na-upakovke.jpg"
+    },
+    {
+        "userId": 4,
         "username": "salim",
-        "password": "3a5d9797c6b9313b4e79eed8c8d369e94eabe3700cf864c625e510ebba02f5b7",
-        "contact": "998902147589",
-        "avatar": "/avatars/1661869650221imgbin-kingsman-film-series-harry-hart-logo-samuel-l-jackson-KUTKV4XYWUHZP8uC7i4LVGbXq_t.jpg"
+        "password": "8a9bcf1e51e812d0af8465a8dbcc9f741064bf0af3b3d08e6b0246437c19f7fb",
+        "contact": "998945556677",
+        "avatar": "/avatars/1662732368533imgbin-kingsman-film-series-harry-hart-logo-samuel-l-jackson-KUTKV4XYWUHZP8uC7i4LVGbXq_t.jpg"
     }
 ]
